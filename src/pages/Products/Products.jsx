@@ -58,7 +58,7 @@ const Products = () => {
 
   
   return (
-    <Container sx={{ my: 4, flexGrow: 1 }}>
+    <Container sx={{ py: 5, flexGrow: 1 }}>
       <Grid
         md={12}
         alignItems={"center"}
@@ -164,7 +164,7 @@ const Products = () => {
                     initial={{ transform: "scale(0.4)" }}
                     animate={{ transform: "scale(1)" }}
                     transition={{ type: "spring", damping: 8, stiffness: 50 }}
-                    key={item.imgPath}
+                    key={item.id}
                     className="card"
                   >
                     <img width={266} src={item.imgPath} alt="" />

@@ -18,7 +18,32 @@ const Item = styled(Paper)(({ theme }) => ({
 const Aboutus = () => {
   const theme = useTheme();
   return (
-    <Container sx={{my:"150px"}}>
+    <Container sx={{py:"100px"}}>
+        <Grid
+        md={12}
+        alignItems={"center"}
+        justifyContent={"center"}
+        sx={{ my: "50px" }}
+      >
+        <Typography
+          variant="h3"
+          sx={{
+            fontSize: { md: "36px", xs: "25px", sm: "36px" },
+            fontWeight: 700,
+            // @ts-ignore
+            color: theme.palette.mode === "dark" ? "#e3f2fd" : "#0f2f57",
+          }}
+        >
+          ABOUT US
+          <Typography
+            sx={{
+              width: { md: "180px", xs: "100px", sm: "180px" },
+              height: "2px",
+              backgroundColor: "#f38b74",
+            }}
+          ></Typography>
+        </Typography>
+      </Grid>
       <Box sx={{ flexGrow: 1, marginTop: 3 }}>
         <Grid container spacing={2} columns={16}>
           <Grid item md={8} >
@@ -32,7 +57,7 @@ const Aboutus = () => {
                     width: "120px",
                     height: "1px",
                     display: "inline-block",
-                    backgroundColor: "#f38b74",
+                    backgroundColor: "",
                   }}
                 ></Typography>
                 <Typography
@@ -42,7 +67,6 @@ const Aboutus = () => {
                     fontWeight: 700,
                   }}
                 >
-                  ABOUT US
                 </Typography>
                 <Typography></Typography>
               </Stack>
@@ -129,14 +153,13 @@ const Aboutus = () => {
                 </Typography>
                 <Typography sx={{ marginTop: "20px" }}>
                   Ullamco laboris nisi ut aliquip ex ea commodo consequat
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat
                 </Typography>
 
                 <Button
                 className="aboutbutton"
                 
                   sx={{
-                    marginTop: "35px",
+                    marginTop: "11px",
                   
                       
                       bgcolor:

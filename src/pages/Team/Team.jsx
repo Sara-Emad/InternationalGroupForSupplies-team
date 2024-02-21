@@ -10,6 +10,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { LinkedIn } from "@mui/icons-material";
+import "./team.css" ;
 
 
 
@@ -22,13 +23,13 @@ const Team = () => {
 
   const theme = useTheme();
   return (
-    <Container>
-    <Box>
+    <Container >
+    <Box py={"100px"}>
           <Grid
           md={12}
           alignItems={"center"}
           justifyContent={"center"}
-          sx={{ pt: "150px" }}
+          
         >
           <Typography
             variant="h3"
@@ -42,7 +43,7 @@ const Team = () => {
              OUR TEAM
             <Typography
               sx={{
-                width: { md: "180px", xs: "80px", sm: "180px" },
+                width: { md: "180px", xs: "125px", sm: "180px" },
                 height: "2px",
                 backgroundColor: "#f38b74",
               }}
@@ -55,14 +56,17 @@ const Team = () => {
           display={"flex"}
           alignItems={"center"}
           justifyContent={"center"}
-          py={5}
+          py={2}
           flexWrap={"wrap"}
         >
-          <Grid  md={6}  sx={{py:2}}>
+          <Grid  md={6}  sx={{py:2 }}>
           
               <Card   sx={{
                     maxWidth: 245 ,
-                    
+                    boxShadow:"0px 2px 15px rgba(0, 0, 0, 0.1)",
+                    ":hover":{
+                      boxShadow:"0px 2px 15px rgba(0, 0, 0, 1)"
+                    }
                     }}
               >
               
@@ -80,16 +84,16 @@ const Team = () => {
                   </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                  <IconButton aria-label="add to favorites">
+                  <IconButton className="btnicon-hover" aria-label="add to favorites">
                     <FacebookIcon />
                   </IconButton>
-                  <IconButton aria-label="share">
+                  <IconButton className="btnicon-hover" aria-label="share">
                     <TwitterIcon />
                   </IconButton>
-                  <IconButton aria-label="share">
+                  <IconButton className="btnicon-hover" aria-label="share">
                     <InstagramIcon />
                   </IconButton>
-                  <IconButton aria-label="share">
+                  <IconButton className="btnicon-hover" aria-label="share">
                     <LinkedIn />
                   </IconButton>
       
@@ -98,8 +102,11 @@ const Team = () => {
               </Card>
             
           </Grid>
-          <Grid md={6}  sx={{py:2}}>
-          <Card sx={{ maxWidth: 245 }}>
+          <Grid md={6}  sx={{py:2 }}>
+          <Card sx={{ maxWidth: 245 , boxShadow:"0px 2px 15px rgba(0, 0, 0, 0.1)",
+                    ":hover":{
+                      boxShadow:"0px 2px 15px rgba(0, 0, 0, 1)"
+                    }}}>
               
               <CardMedia
                 component="img"
@@ -115,16 +122,16 @@ const Team = () => {
                 </Typography>
               </CardContent>
               <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
+                <IconButton className="btnicon-hover" aria-label="add to favorites">
                   <FacebookIcon />
                 </IconButton>
-                <IconButton aria-label="share">
+                <IconButton className="btnicon-hover" aria-label="share">
                   <TwitterIcon />
                 </IconButton>
-                <IconButton aria-label="share">
+                <IconButton className="btnicon-hover" aria-label="share">
                   <InstagramIcon />
                 </IconButton>
-                <IconButton aria-label="share">
+                <IconButton className="btnicon-hover" aria-label="share">
                   <LinkedIn />
                 </IconButton>
       
@@ -132,8 +139,11 @@ const Team = () => {
             
             </Card>
           </Grid>
-          <Grid  md={6}  sx={{py:2}}>
-          <Card sx={{ maxWidth: 245 }}>
+          <Grid  md={6}  sx={{py:2 }}>
+          <Card sx={{ maxWidth: 245 , boxShadow:"0px 2px 15px rgba(0, 0, 0, 0.1)" ,
+                    ":hover":{
+                      boxShadow:"0px 2px 15px rgba(0, 0, 0, 1)"
+                    }}}>
               
               <CardMedia
                 component="img"
@@ -149,16 +159,16 @@ const Team = () => {
                 </Typography>
               </CardContent>
               <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
+                <IconButton className="btnicon-hover" aria-label="add to favorites">
                   <FacebookIcon />
                 </IconButton>
-                <IconButton aria-label="share">
+                <IconButton className="btnicon-hover" aria-label="share">
                   <TwitterIcon />
                 </IconButton>
-                <IconButton aria-label="share">
+                <IconButton className="btnicon-hover" aria-label="share">
                   <InstagramIcon />
                 </IconButton>
-                <IconButton aria-label="share">
+                <IconButton className="btnicon-hover" aria-label="share">
                   <LinkedIn />
                 </IconButton>
       
@@ -166,8 +176,11 @@ const Team = () => {
             
             </Card>
           </Grid>
-          <Grid md={6}   sx={{py:2}}>
-          <Card sx={{ maxWidth: 245 }}>
+          <Grid md={6}   sx={{py:2 }}>
+          <Card sx={{ maxWidth: 245 , boxShadow:"0px 2px 15px rgba(0, 0, 0, 0.1)",
+                    ":hover":{
+                      boxShadow:"0px 2px 15px rgba(0, 0, 0, 1)"
+                    } }}>
               
               <CardMedia
                 component="img"
@@ -183,16 +196,16 @@ const Team = () => {
                 </Typography>
               </CardContent>
               <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
+                <IconButton className="btnicon-hover" aria-label="add to favorites">
                   <FacebookIcon />
                 </IconButton>
-                <IconButton aria-label="share">
+                <IconButton className="btnicon-hover" aria-label="share">
                   <TwitterIcon />
                 </IconButton>
-                <IconButton aria-label="share">
+                <IconButton className="btnicon-hover" aria-label="share">
                   <InstagramIcon />
                 </IconButton>
-                <IconButton aria-label="share">
+                <IconButton className="btnicon-hover" aria-label="share">
                   <LinkedIn />
                 </IconButton>
       

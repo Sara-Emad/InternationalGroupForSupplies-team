@@ -1,12 +1,13 @@
 import { KeyboardArrowUp } from "@mui/icons-material";
 import { Fab, Zoom, useScrollTrigger } from "@mui/material";
+import "../../index.css";
 
 const ScrollToTop = () => {
   return (
     // ===================
     // hook for materialui called usescroll
     // ===================
-    <Zoom in={ useScrollTrigger()}>
+    <Zoom in={ useScrollTrigger({threshold:100})}>
       {/* scroll action button */}
       <Fab
       onClick={() => {
