@@ -1,4 +1,4 @@
-import { Container, Grid, Stack } from "@mui/material";
+import { Box, Container, Grid, Stack } from "@mui/material";
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
@@ -22,49 +22,89 @@ const Team = () => {
 
   const theme = useTheme();
   return (
-    <Container sx={{my:"200px"}}>
-        <Grid
-        md={12}
-        alignItems={"center"}
-        justifyContent={"center"}
-        sx={{ my: "50px" }}
-      >
-        <Typography
-          variant="h3"
-          sx={{
-            fontSize: { md: "36px", xs: "25px", sm: "36px" },
-            fontWeight: 700,
-            // @ts-ignore
-            color: theme.palette.mode === "dark" ? "#e3f2fd" : "#0f2f57",
-          }}
+    <Container>
+    <Box>
+          <Grid
+          md={12}
+          alignItems={"center"}
+          justifyContent={"center"}
+          sx={{ pt: "150px" }}
         >
-           OUR TEAM
           <Typography
+            variant="h3"
             sx={{
-              width: { md: "180px", xs: "80px", sm: "180px" },
-              height: "2px",
-              backgroundColor: "#f38b74",
+              fontSize: { md: "36px", xs: "25px", sm: "36px" },
+              fontWeight: 700,
+              // @ts-ignore
+              color: theme.palette.mode === "dark" ? "#e3f2fd" : "#0f2f57",
             }}
-          ></Typography>
-        </Typography>
-      </Grid>
-      <Stack
-        direction="row"
-        spacing={2}
-        display={"flex"}
-        alignItems={"center"}
-        justifyContent={"center"}
-        py={5}
-        flexWrap={"wrap"}
-      >
-        <Grid  md={6}  sx={{py:2}}>
-        
-            <Card sx={{ maxWidth: 245 }}>
+          >
+             OUR TEAM
+            <Typography
+              sx={{
+                width: { md: "180px", xs: "80px", sm: "180px" },
+                height: "2px",
+                backgroundColor: "#f38b74",
+              }}
+            ></Typography>
+          </Typography>
+        </Grid>
+        <Stack
+          direction="row"
+          spacing={2}
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          py={5}
+          flexWrap={"wrap"}
+        >
+          <Grid  md={6}  sx={{py:2}}>
+          
+              <Card   sx={{
+                    maxWidth: 245 ,
+                    
+                    }}
+              >
+              
+                <CardMedia
+                  component="img"
+                  height="294"
+                  image="public/images/team-1.jpg"
+                  alt="Paella dish"
+                />
+                <CardContent>
+                  <Typography variant="body2" color="text.secondary">
+                    This impressive paella is a perfect party dish and a fun meal
+                    to cook together with your guests. Add 1 cup of frozen peas
+                    along with the mussels, if you like.
+                  </Typography>
+                </CardContent>
+                <CardActions disableSpacing>
+                  <IconButton aria-label="add to favorites">
+                    <FacebookIcon />
+                  </IconButton>
+                  <IconButton aria-label="share">
+                    <TwitterIcon />
+                  </IconButton>
+                  <IconButton aria-label="share">
+                    <InstagramIcon />
+                  </IconButton>
+                  <IconButton aria-label="share">
+                    <LinkedIn />
+                  </IconButton>
+      
+                </CardActions>
+              
+              </Card>
             
+          </Grid>
+          <Grid md={6}  sx={{py:2}}>
+          <Card sx={{ maxWidth: 245 }}>
+              
               <CardMedia
                 component="img"
                 height="294"
-                image="public/images/team-1.jpg"
+                image="public/images/team-2.jpg"
                 alt="Paella dish"
               />
               <CardContent>
@@ -87,115 +127,81 @@ const Team = () => {
                 <IconButton aria-label="share">
                   <LinkedIn />
                 </IconButton>
-
+      
               </CardActions>
             
             </Card>
-          
-        </Grid>
-        <Grid md={6}  sx={{py:2}}>
-        <Card sx={{ maxWidth: 245 }}>
+          </Grid>
+          <Grid  md={6}  sx={{py:2}}>
+          <Card sx={{ maxWidth: 245 }}>
+              
+              <CardMedia
+                component="img"
+                height="294"
+                image="public/images/team-3.jpg"
+                alt="Paella dish"
+              />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  This impressive paella is a perfect party dish and a fun meal
+                  to cook together with your guests. Add 1 cup of frozen peas
+                  along with the mussels, if you like.
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                  <FacebookIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                  <TwitterIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                  <InstagramIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                  <LinkedIn />
+                </IconButton>
+      
+              </CardActions>
             
-            <CardMedia
-              component="img"
-              height="294"
-              image="public/images/team-2.jpg"
-              alt="Paella dish"
-            />
-            <CardContent>
-              <Typography variant="body2" color="text.secondary">
-                This impressive paella is a perfect party dish and a fun meal
-                to cook together with your guests. Add 1 cup of frozen peas
-                along with the mussels, if you like.
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                <FacebookIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <TwitterIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <InstagramIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <LinkedIn />
-              </IconButton>
-
-            </CardActions>
-          
-          </Card>
-        </Grid>
-        <Grid  md={6}  sx={{py:2}}>
-        <Card sx={{ maxWidth: 245 }}>
+            </Card>
+          </Grid>
+          <Grid md={6}   sx={{py:2}}>
+          <Card sx={{ maxWidth: 245 }}>
+              
+              <CardMedia
+                component="img"
+                height="294"
+                image="public/images/team-4.jpg"
+                alt="Paella dish"
+              />
+              <CardContent>
+                <Typography variant="body2" color="text.secondary">
+                  This impressive paella is a perfect party dish and a fun meal
+                  to cook together with your guests. Add 1 cup of frozen peas
+                  along with the mussels, if you like.
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                  <FacebookIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                  <TwitterIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                  <InstagramIcon />
+                </IconButton>
+                <IconButton aria-label="share">
+                  <LinkedIn />
+                </IconButton>
+      
+              </CardActions>
             
-            <CardMedia
-              component="img"
-              height="294"
-              image="public/images/team-3.jpg"
-              alt="Paella dish"
-            />
-            <CardContent>
-              <Typography variant="body2" color="text.secondary">
-                This impressive paella is a perfect party dish and a fun meal
-                to cook together with your guests. Add 1 cup of frozen peas
-                along with the mussels, if you like.
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                <FacebookIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <TwitterIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <InstagramIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <LinkedIn />
-              </IconButton>
-
-            </CardActions>
-          
-          </Card>
-        </Grid>
-        <Grid md={6}   sx={{py:2}}>
-        <Card sx={{ maxWidth: 245 }}>
-            
-            <CardMedia
-              component="img"
-              height="294"
-              image="public/images/team-4.jpg"
-              alt="Paella dish"
-            />
-            <CardContent>
-              <Typography variant="body2" color="text.secondary">
-                This impressive paella is a perfect party dish and a fun meal
-                to cook together with your guests. Add 1 cup of frozen peas
-                along with the mussels, if you like.
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                <FacebookIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <TwitterIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <InstagramIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <LinkedIn />
-              </IconButton>
-
-            </CardActions>
-          
-          </Card>
-        </Grid>
-      </Stack>
+            </Card>
+          </Grid>
+        </Stack>
+    </Box>
     </Container>
   );
 };
