@@ -19,7 +19,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const PrivacyPolicy = () => {
   const theme = useTheme();
   return (
-    <Container sx={{ py: 5 }}>
+    <Container sx={{ pb: "80px" , pt:1}}>
       <Grid
         md={12}
         alignItems={"center"}
