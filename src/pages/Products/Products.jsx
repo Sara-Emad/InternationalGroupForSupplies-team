@@ -6,10 +6,8 @@ import {
   IconButton,
   Link,
   Modal,
-  Paper,
   Stack,
   Typography,
-  styled,
 } from "@mui/material";
 import { useState } from "react";
 import "./Products.css";
@@ -17,14 +15,6 @@ import { myProjects } from "./ProductDetails";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTheme } from "@emotion/react";
 import { Close } from "@mui/icons-material";
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-
-  color: theme.palette.text.secondary,
-}));
 
 const style = {
   position: "absolute",
@@ -55,10 +45,10 @@ const Products = () => {
   const theme = useTheme();
   const [currentActive, setcurrentActive] = useState("all");
   const [arr, setArr] = useState(myProjects);
-
   
+
   return (
-    <Container sx={{ py: 5, flexGrow: 1 }}>
+    <Container sx={{ pb: "100px", pt: 1, flexGrow: 1 }}>
       <Grid
         md={12}
         alignItems={"center"}
@@ -168,7 +158,7 @@ const Products = () => {
                     className="card"
                   >
                     <img width={266} src={item.imgPath} alt="" />
-                    <Item>
+                    <>
                       <Stack
                         sx={{ width: "210px", alignItems: "center" }}
                         className="box"
@@ -262,7 +252,7 @@ const Products = () => {
                           </Button>
                         </Stack>
                       </Stack>
-                    </Item>
+                    </>
                   </motion.article>
                 );
               })}

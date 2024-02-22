@@ -24,7 +24,7 @@ const Team = () => {
   const theme = useTheme();
   return (
     <Container >
-    <Box py={"100px"}>
+    <Box pb={"100px"} pt={2}>
           <Grid
           md={12}
           alignItems={"center"}

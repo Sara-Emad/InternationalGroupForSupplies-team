@@ -11,6 +11,7 @@ import Products from "./pages/Products/Products";
 import ScrollToTop from "./components/scroll/ScrollToTop";
 import Team from "./pages/Team/Team";
 import Contact from "./pages/Contact/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -46,6 +47,7 @@ function App() {
                   <Products />
                   <Team />
                   <Contact/>
+                  <PrivacyPolicy/>
                 </Box>
                 <Footer />
               </>
@@ -70,6 +72,7 @@ function App() {
                   <Products />
                   <Team />
                   <Contact/>
+                  <PrivacyPolicy/>
                 </Box>
                 <Footer />
               </>
@@ -154,6 +157,26 @@ function App() {
               </>
             }
           />
+            <Route
+            path="/PrivacyPolicy"
+            element={
+              <>
+                <Header1 />
+                <Header2 />
+                <Box
+                  sx={{
+                    bgcolor:
+                      // @ts-ignore
+                      theme.palette.bg.main,
+                  }}
+                >
+                  <PrivacyPolicy/>
+                </Box>
+                <Footer />
+              </>
+            }
+          />
+          
         </Routes>
 
         <ScrollToTop />

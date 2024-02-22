@@ -292,7 +292,7 @@ export const myProjects = [
   // ===========================================================
 
   {
-    id:"",
+    id:"48",
     projectTitle: "fruits",
     category: "fruits",
     imgPath: "public/images/5.jpg",
@@ -303,7 +303,7 @@ export const myProjects = [
   // ===========================================================
 
   {
-    id:"",
+    id:"49",
     projectTitle: "vegetables",
     category: "vegetables",
     imgPath: "public/images/3.jpg",

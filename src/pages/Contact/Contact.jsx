@@ -33,14 +33,12 @@ const regEmail =
 const phoneRegExp =
   /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
 
-
-
 const Contact = () => {
   const theme = useTheme();
   const {
     register,
     handleSubmit,
-  
+
     formState: { errors },
   } = useForm();
 
@@ -64,7 +62,7 @@ const Contact = () => {
     handleClick();
   };
   return (
-    <Container sx={{ py: "30px", flexWrap: "wrap" }}>
+    <Container sx={{ pb: "30px",pt:1 , flexWrap: "wrap" }}>
       <Grid
         md={12}
         alignItems={"center"}
@@ -173,12 +171,15 @@ const Contact = () => {
                 <TextField
                   error={Boolean(errors.firstName)}
                   helperText={
-                    (errors.firstName)
+                    errors.firstName
                       ? "This field is required & min 3 character"
                       : null
                   }
                   {...register("firstName", { required: true, minLength: 3 })}
-                  sx={{ flex: 1 ,color:theme.palette.mode === "dark" ? "#000" : "#000"}}
+                  sx={{
+                    flex: 1,
+                    color: theme.palette.mode === "dark" ? "#000" : "#000",
+                  }}
                   label="First Name"
                   variant="outlined"
                   color="success"
@@ -187,7 +188,7 @@ const Contact = () => {
                 <TextField
                   error={Boolean(errors.lastName)}
                   helperText={
-                    (errors.lastName)
+                    errors.lastName
                       ? "This field is required & min 3 character"
                       : null
                   }
@@ -202,9 +203,7 @@ const Contact = () => {
               <TextField
                 error={Boolean(errors.email)}
                 helperText={
-                (errors.email)
-                    ? "Please provide a valid email address"
-                    : null
+                  errors.email ? "Please provide a valid email address" : null
                 }
                 {...register("email", { required: true, pattern: regEmail })}
                 label="Email"
@@ -215,7 +214,7 @@ const Contact = () => {
               <TextField
                 error={Boolean(errors.ContactNumber)}
                 helperText={
-                (errors.ContactNumber)
+                  errors.ContactNumber
                     ? "Please provide a valid Phone number"
                     : null
                 }
@@ -227,14 +226,15 @@ const Contact = () => {
                 variant="outlined"
                 color="success"
               />
-           
-              
-                  <TextField  label="Message" variant="outlined" color="success" />
-              
-        
-            
 
-          
+              <TextField
+                multiline
+                rows={4}
+                label="Message"
+                variant="outlined"
+                color="success"
+              />
+
               <Box sx={{ textAlign: "right" }}>
                 <Button
                   type="submit"
@@ -242,7 +242,7 @@ const Contact = () => {
                   variant="contained"
                   color="success"
                 >
-                Send Message
+                  Send Message
                 </Button>
 
                 <Snackbar
@@ -257,7 +257,7 @@ const Contact = () => {
                     sx={{ width: "100%" }}
                     color="success"
                   >
-                     Message send successfully
+                    Message send successfully
                   </Alert>
                 </Snackbar>
               </Box>
