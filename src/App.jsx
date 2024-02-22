@@ -10,6 +10,7 @@ import Aboutus from "./pages/Aboutus/Aboutus";
 import Products from "./pages/Products/Products";
 import ScrollToTop from "./components/scroll/ScrollToTop";
 import Team from "./pages/Team/Team";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -44,6 +45,7 @@ function App() {
                   <Aboutus />
                   <Products />
                   <Team />
+                  <Contact/>
                 </Box>
                 <Footer />
               </>
@@ -67,6 +69,7 @@ function App() {
                   <Aboutus />
                   <Products />
                   <Team />
+                  <Contact/>
                 </Box>
                 <Footer />
               </>
@@ -127,6 +130,25 @@ function App() {
                   }}
                 >
                   <Team />
+                </Box>
+                <Footer />
+              </>
+            }
+          />
+            <Route
+            path="/Contact"
+            element={
+              <>
+                <Header1 />
+                <Header2 />
+                <Box
+                  sx={{
+                    bgcolor:
+                      // @ts-ignore
+                      theme.palette.bg.main,
+                  }}
+                >
+                  <Contact/>
                 </Box>
                 <Footer />
               </>

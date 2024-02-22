@@ -18,7 +18,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const Aboutus = () => {
   const theme = useTheme();
   return (
-    <Container sx={{py:"100px"}}>
+    <Container sx={{paddingBottom:"100px" , paddingTop:2}}>
         <Grid
         md={12}
         alignItems={"center"}

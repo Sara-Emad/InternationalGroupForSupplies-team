@@ -52,7 +52,7 @@ const Team = () => {
         </Grid>
         <Stack
           direction="row"
-          spacing={2}
+          gap={5}
           display={"flex"}
           alignItems={"center"}
           justifyContent={"center"}
