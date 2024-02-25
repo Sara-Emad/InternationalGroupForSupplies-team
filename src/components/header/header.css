@@ -1,8 +1,9 @@
 .css-1t6c9ts{
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  
+ gap: 25px;
+ justify-content: center;
+ color:#e0f2f165;
 }
 
 /* .MuiBox-root Button{

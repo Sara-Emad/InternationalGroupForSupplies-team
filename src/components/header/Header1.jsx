@@ -25,14 +25,15 @@ const Header1 = () => {
   return (
     <Box
       sx={{
-        bgcolor:theme.palette.mode === "dark" ?  "#fbfbfb":  "#fbfbfb",
+        bgcolor:theme.palette.mode === "dark" ?  "#e8f5e9":  "#fbfbfb",
         py: "7px",
         borderBottomRightRadius: 6,
-        borderBottomLeftRadius: 6,
+        borderBottomLeftRadius: 6, 
       }}
+      
     >
       <Container>
-        <Stack direction={"row"} alignItems={"center"}>
+        <Stack direction={"row"} alignItems={"center"} >
           <Typography
             sx={{
               mr: 2,
@@ -101,33 +102,35 @@ const Header1 = () => {
             </IconButton>
           </Grid>
 
-          <IconButton>
-            <TwitterIcon
-              sx={{
-                fontSize: "16px",
-                color: "#0f2f57",
-              }}
-            />
-          </IconButton>
-
-          <IconButton>
-            <FacebookIcon
-              sx={{
-                fontSize: "16px",
-
-                color: "#0f2f57",
-              }}
-            />
-          </IconButton>
-
-          <IconButton>
-            <InstagramIcon
-              sx={{
-                fontSize: "16px",
-                color: "#0f2f57",
-              }}
-            />
-          </IconButton>
+      <Grid sx={{display:{xs:"none", md:"flex"}}}>
+            <IconButton>
+              <TwitterIcon
+                sx={{
+                  fontSize: "16px",
+                  color: "#0f2f57",
+                }}
+              />
+            </IconButton>
+        
+            <IconButton>
+              <FacebookIcon
+                sx={{
+                  fontSize: "16px",
+        
+                  color: "#0f2f57",
+                }}
+              />
+            </IconButton>
+        
+            <IconButton>
+              <InstagramIcon
+                sx={{
+                  fontSize: "16px",
+                  color: "#0f2f57",
+                }}
+              />
+            </IconButton>
+      </Grid>
         </Stack>
       </Container>
     </Box>

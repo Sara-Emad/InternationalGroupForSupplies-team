@@ -20,7 +20,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#vvv" : "#fff",
+  backgroundColor: theme.palette.mode === "dark" ? "#212730" : "#fff",
   ...theme.typography.body2,
   padding: theme.spacing(2),
   textAlign: "center",

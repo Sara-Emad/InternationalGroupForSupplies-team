@@ -84,16 +84,16 @@ const Team = () => {
                   </Typography>
                 </CardContent>
                 <CardActions disableSpacing>
-                  <IconButton className="btnicon-hover" aria-label="add to favorites">
+                  <IconButton   className="btnicon-hover" aria-label="add to favorites">
                     <FacebookIcon />
                   </IconButton>
-                  <IconButton className="btnicon-hover" aria-label="share">
+                  <IconButton  className="btnicon-hover" aria-label="share">
                     <TwitterIcon />
                   </IconButton>
-                  <IconButton className="btnicon-hover" aria-label="share">
+                  <IconButton  className="btnicon-hover" aria-label="share">
                     <InstagramIcon />
                   </IconButton>
-                  <IconButton className="btnicon-hover" aria-label="share">
+                  <IconButton  className="btnicon-hover" aria-label="share">
                     <LinkedIn />
                   </IconButton>
       

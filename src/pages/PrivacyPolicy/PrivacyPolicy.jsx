@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#fff" : "#fff",
+  backgroundColor: theme.palette.mode === "dark" ? "#212730" : "#fff",
   ...theme.typography.body2,
   padding: theme.spacing(2),
   textAlign: "center",
@@ -49,7 +49,7 @@ const PrivacyPolicy = () => {
         <Stack direction={"column"} display={"flex"} textAlign={"left"}>
           <Typography
             variant="h3"
-            sx={{ fontWeight: 500, color: "#000", fontSize: "1.8rem" }}
+            sx={{ fontWeight: 500, color: theme.palette.mode === "dark" ? "#e3f2fd" : "#0f2f57", fontSize: "1.8rem" }}
           >
             Welcome to I.G.S
           </Typography>
@@ -58,7 +58,7 @@ const PrivacyPolicy = () => {
             sx={{
               py: 3,
               fontWeight: 500,
-              color: "#455a64",
+              color: theme.palette.text.secondary,
               fontSize: "1.2rem",
             }}
           >
@@ -79,7 +79,7 @@ const PrivacyPolicy = () => {
         <Stack direction={"column"} display={"flex"} textAlign={"left"}>
           <Typography
             variant="h3"
-            sx={{ fontWeight: 500, color: "#000", fontSize: "1.8rem" }}
+            sx={{ fontWeight: 500, color:  theme.palette.mode === "dark" ? "#e3f2fd" : "#0f2f57", fontSize: "1.8rem" }}
           >
             HOW WE WILL USE YOUR INFORMATION
           </Typography>
@@ -88,7 +88,7 @@ const PrivacyPolicy = () => {
             sx={{
               py: 3,
               fontWeight: 500,
-              color: "#455a64",
+              color:  theme.palette.text.secondary,
               fontSize: "1.2rem",
             }}
           >

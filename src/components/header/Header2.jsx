@@ -17,6 +17,7 @@ import { green } from "@mui/material/colors";
 
 import "./header.css";
 import { useTheme } from "@mui/material";
+import Header1 from "./Header1";
 
 const pages = [
   { text: "Home", path: "/Home" },
@@ -60,6 +61,7 @@ const Header2 = () => {
 
   return (
     <AppBar   sx={{display: "flex", bgcolor: "#027315", position:"sticky" , zIndex:1030}}>
+      <Header1/>
       <Container>
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}

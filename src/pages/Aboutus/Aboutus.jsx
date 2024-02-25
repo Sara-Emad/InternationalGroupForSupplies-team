@@ -8,7 +8,7 @@ import {green } from "@mui/material/colors";
 // import { deepOrange } from "@mui/material/colors";
 
 const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  backgroundColor: theme.palette.mode === "dark" ? "#212730" : "#fff",
   ...theme.typography.body2,
   padding: theme.spacing(5),
   textAlign: "center",

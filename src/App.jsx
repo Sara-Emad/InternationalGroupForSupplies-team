@@ -1,4 +1,3 @@
-import Header1 from "./components/header/Header1";
 import Header2 from "./components/header/Header2";
 import { Routes, Route } from "react-router-dom";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
@@ -32,7 +31,7 @@ function App() {
             path="/"
             element={
               <>
-                <Header1 />
+                
                 <Header2 />
 
                 <Box
@@ -57,7 +56,7 @@ function App() {
             path="/Home"
             element={
               <>
-                <Header1 />
+                
                 <Header2 />
 
                 <Box
@@ -83,7 +82,7 @@ function App() {
             path="/Aboutus"
             element={
               <>
-                <Header1 />
+                
                 <Header2 />
                 <Box
                   sx={{
@@ -104,7 +103,7 @@ function App() {
             path="/Products"
             element={
               <>
-                <Header1 />
+                
                 <Header2 />
                 <Box
                   sx={{
@@ -123,7 +122,6 @@ function App() {
             path="/Team"
             element={
               <>
-                <Header1 />
                 <Header2 />
                 <Box
                   sx={{
@@ -142,7 +140,6 @@ function App() {
             path="/Contact"
             element={
               <>
-                <Header1 />
                 <Header2 />
                 <Box
                   sx={{
@@ -161,7 +158,6 @@ function App() {
             path="/PrivacyPolicy"
             element={
               <>
-                <Header1 />
                 <Header2 />
                 <Box
                   sx={{
