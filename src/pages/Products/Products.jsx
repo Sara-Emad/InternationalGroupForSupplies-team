@@ -9,7 +9,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Products.css";
 import { myProjects } from "./ProductDetails";
 import { AnimatePresence, motion } from "framer-motion";
@@ -46,6 +46,9 @@ const Products = () => {
   const [currentActive, setcurrentActive] = useState("all");
   const [arr, setArr] = useState(myProjects);
   
+  useEffect(() => {
+  
+  });
 
   return (
     <Container sx={{ pb: "100px", pt: 1, flexGrow: 1 }}>

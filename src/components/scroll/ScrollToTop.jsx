@@ -7,7 +7,7 @@ const ScrollToTop = () => {
     // ===================
     // hook for materialui called usescroll
     // ===================
-    <Zoom in={ useScrollTrigger({threshold:100})}>
+    <Zoom in={ useScrollTrigger()}>
       {/* scroll action button */}
       <Fab
       onClick={() => {

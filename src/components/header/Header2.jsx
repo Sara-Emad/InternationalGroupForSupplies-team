@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 // import AdbIcon from "@mui/icons-material/Adb";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { green } from "@mui/material/colors";
 
@@ -58,6 +58,10 @@ const Header2 = () => {
   const navigate = useNavigate();
   let location = useLocation();
   const theme = useTheme();
+
+  useEffect(() => {
+    window.scrollTo({top:0})
+  });
 
   return (
     <AppBar   sx={{display: "flex", bgcolor: "#027315", position:"sticky" , zIndex:1030}}>
