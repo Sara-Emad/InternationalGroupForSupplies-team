@@ -45,10 +45,14 @@ const Products = () => {
   const theme = useTheme();
   const [currentActive, setcurrentActive] = useState("all");
   const [arr, setArr] = useState(myProjects);
-  
+
   useEffect(() => {
-  
-  });
+    setcurrentActive("Herbs");
+    const newArr = myProjects.filter((item) => {
+      return item.category === "Herbs";
+    });
+    setArr(newArr);
+  },[]);
 
   return (
     <Container sx={{ pb: "100px", pt: 1, flexGrow: 1 }}>
@@ -81,7 +85,7 @@ const Products = () => {
       <Grid container spacing={2}>
         <Grid item md={2}>
           <Stack className="left-section  flex">
-            <Button
+            {/* <Button
               onClick={() => {
                 setcurrentActive("all");
                 setArr(myProjects);
@@ -89,7 +93,7 @@ const Products = () => {
               className={currentActive === "all" ? "active" : null}
             >
               all
-            </Button>
+            </Button> */}
 
             <Button
               onClick={() => {
@@ -160,7 +164,9 @@ const Products = () => {
                     key={item.id}
                     className="card"
                   >
-                    <img width={266} src={item.imgPath} alt="" />
+                  
+                      <img width={266} height={180} src={item.imgPath} alt="" />
+                  
                     <>
                       <Stack
                         sx={{ width: "210px", alignItems: "center" }}

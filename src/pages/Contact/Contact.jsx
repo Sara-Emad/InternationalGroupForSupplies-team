@@ -38,6 +38,7 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
+    reset, 
 
     formState: { errors },
   } = useForm();
@@ -60,7 +61,18 @@ const Contact = () => {
     console.log("doneeeeeeeeeeee");
 
     handleClick();
+    reset();
   };
+
+  // const handleSubmit = () => {
+    
+  // };
+
+
+
+
+
+
   return (
     <Container sx={{ pb: "30px",pt:1 , flexWrap: "wrap" }}>
       <Grid
@@ -237,10 +249,12 @@ const Contact = () => {
 
               <Box sx={{ textAlign: "right" }}>
                 <Button
+                value=""
                   type="submit"
                   sx={{ textTransform: "capitalize" }}
                   variant="contained"
                   color="success"
+                  
                 >
                   Send Message
                 </Button>

@@ -11,13 +11,15 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 // import AdbIcon from "@mui/icons-material/Adb";
-import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { green } from "@mui/material/colors";
+import { useEffect } from "react";
+
 
 import "./header.css";
 import { useTheme } from "@mui/material";
 import Header1 from "./Header1";
+import { useState } from "react";
 
 const pages = [
   { text: "Home", path: "/Home" },
@@ -37,6 +39,10 @@ const settings = [
 ];
 
 const Header2 = () => {
+
+  useEffect(() => {
+    window.scrollTo({top:0})
+  });
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -59,9 +65,7 @@ const Header2 = () => {
   let location = useLocation();
   const theme = useTheme();
 
-  useEffect(() => {
-    window.scrollTo({top:0})
-  });
+
 
   return (
     <AppBar   sx={{display: "flex", bgcolor: "#027315", position:"sticky" , zIndex:1030}}>
