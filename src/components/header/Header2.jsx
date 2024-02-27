@@ -40,9 +40,15 @@ const settings = [
 
 const Header2 = () => {
 
+  const navigate = useNavigate();
+  let location = useLocation();
+  const theme = useTheme();
+
   useEffect(() => {
     window.scrollTo({top:0})
-  });
+  } ,[location]);
+
+  
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -61,9 +67,6 @@ const Header2 = () => {
     setAnchorElUser(null);
   };
 
-  const navigate = useNavigate();
-  let location = useLocation();
-  const theme = useTheme();
 
 
 
@@ -126,7 +129,7 @@ const Header2 = () => {
                   onClick={() => {
                     navigate(item.path), handleCloseNavMenu;
                   }}
-                  className=" css-1t6c9ts"
+                  className="css-1t6c9ts"
                 >
                   <Typography textAlign="center">{item.text}</Typography>
                 </MenuItem>

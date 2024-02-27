@@ -4,8 +4,6 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { Button, Container, Stack, Typography, useTheme } from "@mui/material";
 import DoneAllOutlinedIcon from "@mui/icons-material/DoneAllOutlined";
-import {green } from "@mui/material/colors";
-// import { deepOrange } from "@mui/material/colors";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#212730" : "#fff",
@@ -163,7 +161,7 @@ const Aboutus = () => {
                   
                       
                       bgcolor:
-                        theme.palette.mode === "dark" ? green[200] : green[200],
+                        theme.palette.mode === "dark" ? "#027315": "#027315",
                       boxShadow: "0px 4px 16px rgba(43, 52 ,69 , 0.1)",
                       color:   theme.palette.mode === "dark" ? " #fff" :" #fff" ,
                     
@@ -173,7 +171,7 @@ const Aboutus = () => {
                             ? "#fff" 
                             : "#fff" ,
                         boxShadow: "0px 4px 16px rgba(43, 52 ,69 , 0.1)",
-                        color:   theme.palette.mode === "dark" ?  green[200] : green[200],
+                        color:   theme.palette.mode === "dark" ?  "#4caf50": "#4caf50" ,
                         border:"2px solid #4caf50",
                       },
                   

@@ -4,7 +4,6 @@ import {
   Container,
   Grid,
   IconButton,
-  Link,
   Modal,
   Stack,
   Typography,
@@ -17,7 +16,7 @@ import { useTheme } from "@emotion/react";
 import { Close } from "@mui/icons-material";
 
 const style = {
-  position: "absolute",
+  position: "fixed",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
@@ -26,11 +25,15 @@ const style = {
   border: "1px solid #027315",
   boxShadow: "24px",
   p: 4,
+  
 };
 
 const Products = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+
+  
+  
 
   const expandModal = (item) => {
     setSelectedProject(item);
@@ -110,15 +113,15 @@ const Products = () => {
 
             <Button
               onClick={() => {
-                setcurrentActive("seeds");
+                setcurrentActive("spices");
                 const newArr = myProjects.filter((item) => {
-                  return item.category === "seeds";
+                  return item.category === "spices";
                 });
                 setArr(newArr);
               }}
-              className={currentActive === "seeds" ? "active" : null}
+              className={currentActive === "spices" ? "active" : null}
             >
-              seeds
+              spices
             </Button>
 
             <Button
@@ -233,8 +236,9 @@ const Products = () => {
                               },
                             }}
                           >
-                            <Link
-                              href="#"
+                            <Box
+
+                              
                               sx={{
                                 textDecoration: "none",
                                 color:
@@ -257,7 +261,7 @@ const Products = () => {
                                 style={{ alignSelf: "end" }}
                                 className="icon-arrow-right"
                               ></span>
-                            </Link>
+                            </Box>
                           </Button>
                         </Stack>
                       </Stack>
@@ -298,7 +302,7 @@ const Products = () => {
           >
             <Box sx={{ display: "flex" }}>
               <img
-                width={300}
+                 width={266} height={180}
                 src={selectedProject && selectedProject.imgPath}
                 alt=""
               />

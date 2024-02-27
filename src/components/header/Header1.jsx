@@ -22,6 +22,16 @@ const Header1 = () => {
   const colorMode = useContext(ColorModeContext);
   const theme = useTheme();
 
+  const handleModeChange = (eo) => {
+    eo.preventDefault(); // Prevent page reload
+    localStorage.setItem(
+      "mode",
+      theme.palette.mode === "dark" ? "light" : "dark"
+    );
+    colorMode.toggleColorMode();
+  };
+  
+
   return (
     <Box
       sx={{
@@ -51,16 +61,10 @@ const Header1 = () => {
 
           <Box flexGrow={1} />
 
-          <div>
+          <Box>
             {theme.palette.mode === "light" ? (
               <IconButton
-                onClick={() => {
-                  localStorage.setItem(
-                    "mode",
-                    theme.palette.mode === "dark" ? "light" : "dark"
-                  );
-                  colorMode.toggleColorMode();
-                }}
+                onClick={handleModeChange}
                 color="inherit"
               >
                 <LightModeOutlined sx={{ fontSize: "", color: "#0f2f57" }} />
@@ -79,7 +83,7 @@ const Header1 = () => {
                 <DarkModeOutlined sx={{ fontSize: "" ,color: "#0f2f57"  }} />
               </IconButton>
             )}
-          </div>
+          </Box>
 
           <Grid>
             <IconButton

@@ -114,7 +114,7 @@ const Home = () => {
                       py: 1,
                       mt: 2,
                       bgcolor:
-                        theme.palette.mode === "dark" ? green[200] : green[200],
+                        theme.palette.mode === "dark" ? "#295936": "#295936" ,
                       boxShadow: "0px 4px 16px rgba(43, 52 ,69 , 0.1)",
                       color:   theme.palette.mode === "dark" ? " #fff" :" #fff" ,
                     
