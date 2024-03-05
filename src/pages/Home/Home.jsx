@@ -1,4 +1,4 @@
-import { Box, Button,Typography, useTheme } from "@mui/material";
+import { Box, Button, Typography, useTheme } from "@mui/material";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,15 +9,13 @@ import {
   Autoplay,
   Navigation,
   Scrollbar,
-  A11y
-  
+  A11y,
 } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "./Slider.css";
-import { green } from "@mui/material/colors";
 import { Link } from "react-router-dom";
 
 // arry for repate (map) element
@@ -26,17 +24,16 @@ import { Link } from "react-router-dom";
 const mySlider = [
   { text: "International Group For Supplies", link: "public/images/s4-1.jpg" },
   { text: "International Group For Supplies", link: "public/images/s2.jpg" },
+  { text: "International Group For Supplies", link: "public/images/s1.jpg" },
 ];
 const Home = () => {
   const theme = useTheme();
 
-
-
   return (
     <>
-      <Box sx={{  display: "flex", alignItems: "center", gap: 2 }}>
-        <Swiper 
-        modules={[Pagination, Autoplay, Navigation, Scrollbar, A11y]}
+      <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+        <Swiper
+          modules={[Pagination, Autoplay, Navigation, Scrollbar, A11y]}
           loop={true}
           speed={6000}
           className="mySwiper"
@@ -46,14 +43,10 @@ const Home = () => {
             dynamicBullets: true,
           }}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
-        
-
         >
           {mySlider.map((item) => {
             return (
-              <SwiperSlide
-
-               key={item.link} className="parent-slider">
+              <SwiperSlide key={item.link} className="parent-slider">
                 <img src={item.link} alt="" />
                 <Box
                   // اكواد ميديا كويري لجعل هذة الخصائص عند الشاشات الاكبر من سمول نحضرها من
@@ -76,8 +69,9 @@ const Home = () => {
                   <Typography
                     variant="h4"
                     sx={{
-                      fontWeight: 400,
-                      color: theme.palette.mode === "dark" ? "white" : "white",
+                      fontWeight: 600,
+                      fontSize:"38px",
+                      color: theme.palette.mode === "dark" ? "#000" : "#fff",
                     }}
                   >
                     Welcome to
@@ -87,7 +81,7 @@ const Home = () => {
                     variant="h5"
                     sx={{
                       color:
-                        theme.palette.mode === "dark" ? green[200] : green[200],
+                        theme.palette.mode === "dark" ? "#000" : "#fff",
                       fontWeight: 500,
                       my: 2,
                     }}
@@ -120,22 +114,24 @@ const Home = () => {
                       py: 1,
                       mt: 2,
                       bgcolor:
-                        theme.palette.mode === "dark" ? "#027315": "#027315" ,
+                        theme.palette.mode === "dark" ? "#027315" : "#027315",
                       boxShadow: "0px 4px 16px rgba(43, 52 ,69 , 0.1)",
-                      color:   theme.palette.mode === "dark" ? " #fff" :" #fff" ,
-                    
+                      color: theme.palette.mode === "dark" ? " #fff" : " #fff",
+                      borderRadius: "20px",
+
                       "&:hover": {
                         bgcolor:
-                          theme.palette.mode === "dark"
-                            ? "#fff" 
-                            : "#fff" ,
+                          theme.palette.mode === "dark" ? "#fff" : "#fff",
                         boxShadow: "0px 4px 16px rgba(43, 52 ,69 , 0.1)",
-                        color:   theme.palette.mode === "dark" ?  "#027315" : "#027315"
+                        color:
+                          theme.palette.mode === "dark" ? "#027315" : "#027315",
                       },
                     }}
                     variant="contained"
                   >
-                    <Link className="linkcss" to="/Products">Get Start</Link>
+                    <Link className="linkcss" to="/Products">
+                      Get Start
+                    </Link>
                   </Button>
                 </Box>
               </SwiperSlide>
