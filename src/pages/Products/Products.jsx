@@ -25,15 +25,11 @@ const style = {
   border: "1px solid #027315",
   boxShadow: "24px",
   p: 4,
-  
 };
 
 const Products = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
-
-  
-  
 
   const expandModal = (item) => {
     setSelectedProject(item);
@@ -55,11 +51,12 @@ const Products = () => {
       return item.category === "Herbs";
     });
     setArr(newArr);
-  },[]);
+  }, []);
 
   return (
     <Container sx={{ pb: "100px", pt: 1, flexGrow: 1 }}>
       <Grid
+        item
         md={12}
         alignItems={"center"}
         justifyContent={"center"}
@@ -167,12 +164,11 @@ const Products = () => {
                     key={item.id}
                     className="card"
                   >
-                  
-                      <img width={266} height={180} src={item.imgPath} alt="" />
-                  
+                    <img width={266} height={180} src={item.imgPath} alt="" />
+
                     <>
                       <Stack
-                        sx={{ width: "210px", alignItems: "center" }}
+                        sx={{ width: "250px",display:"flex", justifyContent:"center" ,alignItems: "center" }}
                         className="box"
                       >
                         <Typography
@@ -187,20 +183,7 @@ const Products = () => {
                         >
                           {item.projectTitle}
                         </Typography>
-                        {/* <Typography
-                          className="sub-title"
-                          sx={{
-                            color:
-                              // @ts-ignore
-                              theme.palette.mode === "dark"
-                                ? "#e3f2fd"
-                                : "#0f2f57",
-                          }}
-                        >
-                          Lorem ipsum dolor sit amet consectetur elit
-                          adipisicing . Ex tempore dolor in, accusantium
-                          laudantium accusamus.
-                        </Typography> */}
+                      
 
                         <Stack
                           className="flex icons"
@@ -214,45 +197,31 @@ const Products = () => {
                             sx={{
                               width: "6px",
                               bgcolor:
-                                // @ts-ignore
-                                theme.palette.mode === "dark"
-                                  ? "#0f2f57"
-                                  : "#0f2f57",
+                              "#027315",
+                              borderColor:"#027315",
 
                               "&:hover": {
                                 bgcolor:
-                                  // @ts-ignore
-                                  theme.palette.mode === "dark"
-                                    ? "#fff"
-                                    : "#fff",
+                                "#027315",
 
-                                border: "2px solid",
+                                border: "2px solid ",
 
                                 borderColor:
                                   // @ts-ignore
                                   theme.palette.mode === "dark"
-                                    ? "#0f2f57"
-                                    : "#0f2f57",
+                                    ? "#027315"
+                                    : "#027315",
                               },
                             }}
                           >
                             <Box
-
-                              
                               sx={{
                                 textDecoration: "none",
-                                color:
-                                  // @ts-ignore
-                                  theme.palette.mode === "dark"
-                                    ? "#e8eaf6"
-                                    : "#e8eaf6",
+
+                                color: "#fff !important",
 
                                 "&:hover": {
-                                  color:
-                                    // @ts-ignore
-                                    theme.palette.mode === "dark"
-                                      ? "#0f2f57"
-                                      : "#0f2f57",
+                                  color: "#fff !important",
                                 },
                               }}
                             >
@@ -302,7 +271,8 @@ const Products = () => {
           >
             <Box sx={{ display: "flex" }}>
               <img
-                 width={266} height={180}
+                width={266}
+                height={180}
                 src={selectedProject && selectedProject.imgPath}
                 alt=""
               />

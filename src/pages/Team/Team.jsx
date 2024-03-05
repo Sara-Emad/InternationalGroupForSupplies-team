@@ -63,9 +63,9 @@ const Team = () => {
           
               <Card   sx={{
                     maxWidth: 245 ,
-                    boxShadow:"0px 2px 15px rgba(0, 0, 0, 0.1)",
+                    boxShadow:"0px 2px 15px rgba(155, 81, 224, 0.1)",
                     ":hover":{
-                      boxShadow:"0px 2px 15px rgba(0, 0, 0, 1)"
+                      boxShadow:"0px 2px 15px rgba(155, 81, 224,1)"
                     }
                     }}
               >
@@ -103,9 +103,9 @@ const Team = () => {
             
           </Grid>
           <Grid md={6}  sx={{py:2 }}>
-          <Card sx={{ maxWidth: 245 , boxShadow:"0px 2px 15px rgba(0, 0, 0, 0.1)",
+          <Card sx={{ maxWidth: 245 , boxShadow:"0px 2px 15px rgba(155, 81, 224, 0.1)",
                     ":hover":{
-                      boxShadow:"0px 2px 15px rgba(0, 0, 0, 1)"
+                      boxShadow:"0px 2px 15px rgba(155, 81, 224, 1)"
                     }}}>
               
               <CardMedia
@@ -140,9 +140,9 @@ const Team = () => {
             </Card>
           </Grid>
           <Grid  md={6}  sx={{py:2 }}>
-          <Card sx={{ maxWidth: 245 , boxShadow:"0px 2px 15px rgba(0, 0, 0, 0.1)" ,
+          <Card sx={{ maxWidth: 245 , boxShadow:"0px 2px 15px rgba(155, 81, 224, 0.1)" ,
                     ":hover":{
-                      boxShadow:"0px 2px 15px rgba(0, 0, 0, 1)"
+                      boxShadow:"0px 2px 15px rgba(155, 81, 224, 1)"
                     }}}>
               
               <CardMedia
@@ -177,9 +177,9 @@ const Team = () => {
             </Card>
           </Grid>
           <Grid md={6}   sx={{py:2 }}>
-          <Card sx={{ maxWidth: 245 , boxShadow:"0px 2px 15px rgba(0, 0, 0, 0.1)",
+          <Card sx={{ maxWidth: 245 , boxShadow:"0px 2px 15px rgba(155, 81, 224, 0.1)",
                     ":hover":{
-                      boxShadow:"0px 2px 15px rgba(0, 0, 0, 1)"
+                      boxShadow:"0px 2px 15px rgba(155, 81, 224, 1)"
                     } }}>
               
               <CardMedia

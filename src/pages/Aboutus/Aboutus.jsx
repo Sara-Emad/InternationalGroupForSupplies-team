@@ -4,6 +4,7 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import { Button, Container, Stack, Typography, useTheme } from "@mui/material";
 import DoneAllOutlinedIcon from "@mui/icons-material/DoneAllOutlined";
+import { Link } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#212730" : "#fff",
@@ -18,6 +19,7 @@ const Aboutus = () => {
   return (
     <Container sx={{paddingBottom:"100px" , paddingTop:2}}>
         <Grid
+        item
         md={12}
         alignItems={"center"}
         justifyContent={"center"}
@@ -177,7 +179,7 @@ const Aboutus = () => {
                   
                   }}
                 >
-                  Contact with us
+                <Link to="/Contact" className="linkcss">  Contact with us</Link>
                 </Button>
               </Stack>
             </Item>

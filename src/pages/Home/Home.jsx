@@ -18,6 +18,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./Slider.css";
 import { green } from "@mui/material/colors";
+import { Link } from "react-router-dom";
 
 // arry for repate (map) element
 // repate element التكرار, use array with map and not forget key
@@ -29,13 +30,15 @@ const mySlider = [
 const Home = () => {
   const theme = useTheme();
 
+
+
   return (
     <>
       <Box sx={{  display: "flex", alignItems: "center", gap: 2 }}>
         <Swiper 
         modules={[Pagination, Autoplay, Navigation, Scrollbar, A11y]}
           loop={true}
-          speed={5000}
+          speed={6000}
           className="mySwiper"
           scrollbar={{ draggable: true }}
           navigation
@@ -43,11 +46,14 @@ const Home = () => {
             dynamicBullets: true,
           }}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
-          
+        
+
         >
           {mySlider.map((item) => {
             return (
-              <SwiperSlide key={item.link} className="parent-slider">
+              <SwiperSlide
+
+               key={item.link} className="parent-slider">
                 <img src={item.link} alt="" />
                 <Box
                   // اكواد ميديا كويري لجعل هذة الخصائص عند الشاشات الاكبر من سمول نحضرها من
@@ -114,7 +120,7 @@ const Home = () => {
                       py: 1,
                       mt: 2,
                       bgcolor:
-                        theme.palette.mode === "dark" ? "#295936": "#295936" ,
+                        theme.palette.mode === "dark" ? "#027315": "#027315" ,
                       boxShadow: "0px 4px 16px rgba(43, 52 ,69 , 0.1)",
                       color:   theme.palette.mode === "dark" ? " #fff" :" #fff" ,
                     
@@ -124,12 +130,12 @@ const Home = () => {
                             ? "#fff" 
                             : "#fff" ,
                         boxShadow: "0px 4px 16px rgba(43, 52 ,69 , 0.1)",
-                        color:   theme.palette.mode === "dark" ?  green[200] : green[200]
+                        color:   theme.palette.mode === "dark" ?  "#027315" : "#027315"
                       },
                     }}
                     variant="contained"
                   >
-                    Get Start
+                    <Link className="linkcss" to="/Products">Get Start</Link>
                   </Button>
                 </Box>
               </SwiperSlide>
